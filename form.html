@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<div class="formlogo"><a href="index.html"><img src="https://static.lenskart.com/media/desktop/img/site-images/main_logo.svg" alt="logo" class="logo"></a>
+</div> 
+<body class="loginform">
+    <section class="wrapper">
+        <div class="form signup">
+            <header>Signup</header>
+            <form action="#">
+                <input type="text" placeholder="Full Name" required>
+                <input type="text" placeholder="Email address" required>
+                <input type="password" placeholder="Password" required>
+                <div class="checkbox">
+                    <input type="checkbox" id="signupCheck">
+                    <label for="signupCheck">I accept all terms & conditions</label>
+                </div>
+                <input type="submit" value="submit">
+            </form>
+        </div>
+        <div class="form login">
+            <header>Login</header>
+            <form action="#">
+                <input type="text" placeholder="Email address" required>
+                <input type="password" placeholder="Password" required>
+                <a href="#">Forget Password</a>
+                <input type="submit" value="submit" name="" id="">
+            </form>
+        </div>
+
+        <script>
+            const wrapper = document.querySelector(".wrapper"),
+            signupHeader = document.querySelector(".signup header"), 
+            loginHeader = document.querySelector(".login header")
+            loginHeader.addEventListener("click", () =>{
+                wrapper.classList.add("active");
+            });
+            signupHeader.addEventListener("click", () =>{
+                wrapper.classList.remove("active");
+            });
+        </script>
+
+    </section>
+    
+</body>
+</html>
